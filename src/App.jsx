@@ -24,7 +24,9 @@ const App = () => {
 	];
 
 	const handleAdd = (ingredient) => {
-		setStack([ingredient, ...stack]);
+		if (stack.length < ingredients.length) {
+			setStack([ingredient, ...stack]);
+		}
 	};
 
 	const handleRemove = (index) => {
